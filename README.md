@@ -14,17 +14,17 @@ This project demonstrates backend architecture, API design, authentication, auth
 
 ## 🚀 Features
 
-### 🔐 Authentication & Authorization
+###  Authentication & Authorization
 - JWT-based login system
 - Secure password hashing (BCrypt)
 - Role-based access control:
-  - 👁️ Viewer → Read-only access
-  - 📊 Analyst → Records + dashboard access
-  - 🛠️ Admin → Full control (users + records)
+  -  Viewer → Read-only access
+  -  Analyst → Records + dashboard access
+  -  Admin → Full control (users + records)
 
 ---
 
-### 👤 User Management
+###  User Management
 - Register new users
 - Login with JWT token
 - Assign roles (ADMIN, ANALYST, VIEWER)
@@ -33,7 +33,7 @@ This project demonstrates backend architecture, API design, authentication, auth
 
 ---
 
-### 💳 Financial Records
+### Financial Records
 - Create financial entries
 - View all records
 - Update records
@@ -45,7 +45,7 @@ This project demonstrates backend architecture, API design, authentication, auth
 
 ---
 
-### 📊 Dashboard APIs
+###  Dashboard APIs
 - Total Income
 - Total Expenses
 - Net Balance
@@ -54,7 +54,7 @@ This project demonstrates backend architecture, API design, authentication, auth
 
 ---
 
-### 🛡️ Security
+###  Security
 - JWT Authentication Filter
 - Stateless session (Spring Security)
 - Role-based endpoint protection
