@@ -104,3 +104,59 @@ This project demonstrates backend architecture, API design, authentication, auth
 ```bash
 git clone https://github.com/Arjunsingh-7/Finance-Data-Processing-and-Access-Control-Backend.git
 cd Finance-Data-Processing-and-Access-Control-Backend
+
+## 📡 API Endpoints
+
+### 🔐 Authentication
+- `POST /api/auth/register` → Register a new user  
+- `POST /api/auth/login` → Login and receive JWT token  
+
+---
+
+### 👤 User Management (Admin Only)
+- `GET /api/users` → Get all users  
+- `GET /api/users/{id}` → Get user by ID  
+- `PUT /api/users/{id}` → Update user  
+- `DELETE /api/users/{id}` → Delete user  
+
+---
+
+### 💳 Financial Records
+- `GET /api/records` → Get all records (Authenticated users)  
+- `GET /api/records/{id}` → Get record by ID  
+- `POST /api/records` → Create record (Analyst/Admin)  
+- `PUT /api/records/{id}` → Update record (Analyst/Admin)  
+- `DELETE /api/records/{id}` → Delete record (Analyst/Admin)  
+
+---
+
+### 📊 Dashboard
+- `GET /api/dashboard/summary` → Get financial summary  
+- `GET /api/dashboard/**` → Analytics (Analyst/Admin)  
+
+---
+
+### 🔑 Authorization Header Format
+
+All protected APIs require JWT token:
+
+## 📁 Project Structure
+
+
+src/main/java/com/finance
+│
+├── controller # Handles API requests (Auth, Users, Records, Dashboard)
+│
+├── service # Business logic layer
+│
+├── repository # Database access (JPA Repositories)
+│
+├── entity # Database models (User, Role, FinancialRecord)
+│
+├── dto # Request & Response objects
+│
+├── security # JWT, Filters, Spring Security configuration
+│
+├── exception # Global exception handling
+│
+└── config # Application configuration (Password encoder, etc.)
